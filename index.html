@@ -165,14 +165,14 @@ footer{background:#0e1b14;color:#c5d0c1;padding:44px 0 110px;font-size:.95rem}
 
 <section id="quiz"><div class="wrap narrow">
 <span class="eyebrow">Get started</span><h2>What do your trees need?</h2>
-<p class="sub">Three quick taps, then send it to Arbor Concepts as a text with a photo of the tree. Nothing is sent until you hit send on your phone.</p>
+<p class="sub">Three quick taps, then send it to Arbor Concepts as an email with a photo of the tree, or just call. Nothing is sent until you hit send.</p>
 <div class="quiz-nojs card" style="margin-top:20px"><p style="margin:0">Call <a href="tel:+12107797084">(210) 779-7084</a> or email <a href="mailto:arborconcepts24.7@gmail.com">arborconcepts24.7@gmail.com</a> with photos of the trees.</p></div>
 <div class="quiz" id="qz" aria-live="polite">
 <div class="step" id="qstep">Step 1 of 3</div><div class="bar" aria-hidden="true"><i id="qbar"></i></div>
 <fieldset data-q="what"><legend>What do you need?</legend><div class="opts"><button type="button" class="o">Trimming or pruning</button><button type="button" class="o">Tree or palm removal</button><button type="button" class="o">Stump grinding or lot clearing</button><button type="button" class="o">Storm damage or a fallen limb</button><button type="button" class="o">A tree health or risk check</button></div></fieldset>
 <fieldset data-q="where" hidden><legend>Where are the trees?</legend><div class="opts"><button type="button" class="o">At my home</button><button type="button" class="o">At a business or commercial property</button></div></fieldset>
 <fieldset data-q="when" hidden><legend>How soon?</legend><div class="opts"><button type="button" class="o">It's an emergency</button><button type="button" class="o">Soon</button><button type="button" class="o">Just planning ahead</button></div></fieldset>
-<div data-q="done" hidden><p class="sum" id="qsum"></p><p class="warn" id="qwarn" hidden>For an emergency, calling is fastest: (210) 779-7084.</p><p>Tap below to open a text with your answers, then add a photo of the tree.</p><div class="cta-row" style="margin:12px 0 0"><a class="btn btn-acc" id="qsms" href="sms:+12107797084">Text this to Arbor Concepts</a><a class="btn btn-line" href="tel:+12107797084">Call (210) 779-7084</a></div></div>
+<div data-q="done" hidden><p class="sum" id="qsum"></p><p class="warn" id="qwarn" hidden>For an emergency, calling is fastest: (210) 779-7084.</p><p>Tap below to open an email with your answers, then attach a photo of the tree.</p><div class="cta-row" style="margin:12px 0 0"><a class="btn btn-acc" id="qsms" href="mailto:arborconcepts24.7@gmail.com?subject=Tree%20service%20request">Email this to Arbor Concepts</a><a class="btn btn-line" href="tel:+12107797084">Call (210) 779-7084</a></div></div>
 <button type="button" class="back" id="qback" hidden>Back</button>
 </div>
 </div></section>
@@ -212,7 +212,7 @@ footer{background:#0e1b14;color:#c5d0c1;padding:44px 0 110px;font-size:.95rem}
 </div></section>
 </main>
 <footer><div class="wrap fgrid"><div><a class="logo" href="#top" style="color:#fff"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#2b4d3a"/><circle cx="17" cy="17" r="11" fill="none" stroke="#8FA58A" stroke-width="1.5"/><circle cx="17" cy="17" r="6" fill="none" stroke="#8FA58A" stroke-width="1.5"/><circle cx="17" cy="17" r="2" fill="#E2711D"/></svg>Arbor Concepts</a><p style="margin-top:14px">Family-owned tree care in San Antonio.</p></div><div><b style="color:#fff">Contact</b><br><a href="tel:+12107797084">(210) 779-7084</a><br>1435 W Villaret Blvd, San Antonio, TX 78224</div><div><b style="color:#fff">Links</b><ul class="flinks"><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#worth">What you gain</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div></div><div class="wrap copy">&copy; Arbor Concepts. All rights reserved. &middot; Preview prepared by Forge Systems.</div></footer>
-<nav class="mbar" aria-label="Quick contact"><a class="q" href="tel:+12107797084">Call now<small>(210) 779-7084</small></a><a href="sms:+12107797084">Text<small>Send a photo</small></a></nav>
+<nav class="mbar" aria-label="Quick contact"><a class="q" href="tel:+12107797084">Call now<small>(210) 779-7084</small></a><a href="mailto:arborconcepts24.7@gmail.com?subject=Tree%20service%20request">Email<small>Send a photo</small></a></nav>
 <script>
 (function(){var d=document.documentElement;d.classList.add('js');
 var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,IO='IntersectionObserver' in window;
@@ -223,7 +223,7 @@ if(rm||!IO){rv.forEach(function(e){e.classList.add('in')})}else{var io=new Inter
 var q=document.getElementById('qz');if(!q)return;var fs=[].slice.call(q.querySelectorAll('[data-q]')),i=0,ans={},n=3;
 var st=document.getElementById('qstep'),bar=document.getElementById('qbar'),bk=document.getElementById('qback');
 function show(k){i=k;fs.forEach(function(f,j){f.hidden=j!==k});st.textContent=k<n?'Step '+(k+1)+' of '+n:'Done';bar.style.transform='scaleX('+Math.min(1,(k+1)/n)+')';bk.hidden=k===0;
-if(k===n){var t='Hi Arbor Concepts, I found your site. I need: '+ans.what+'. Where: '+ans.where+'. How soon: '+ans.when+'. Photo attached.';document.getElementById('qsum').textContent=ans.what+' · '+ans.where+' · '+ans.when;document.getElementById('qwarn').hidden=ans.when.indexOf('emergency')<0;document.getElementById('qsms').href='sms:+12107797084?body='+encodeURIComponent(t)}}
+if(k===n){var t='Hi Arbor Concepts, I found your site. I need: '+ans.what+'. Where: '+ans.where+'. How soon: '+ans.when+'. Photo attached.';document.getElementById('qsum').textContent=ans.what+' · '+ans.where+' · '+ans.when;document.getElementById('qwarn').hidden=ans.when.indexOf('emergency')<0;document.getElementById('qsms').href='mailto:arborconcepts24.7@gmail.com?subject=Tree%20service%20request&body='+encodeURIComponent(t)}}
 fs.forEach(function(f,j){[].slice.call(f.querySelectorAll('button.o')).forEach(function(b){b.setAttribute('aria-pressed','false');b.addEventListener('click',function(){[].slice.call(f.querySelectorAll('button.o')).forEach(function(x){x.setAttribute('aria-pressed',x===b)});ans[f.getAttribute('data-q')]=b.textContent;setTimeout(function(){show(j+1);var nx=fs[j+1].querySelector('button,a');if(nx)nx.focus({preventScroll:true})},120)})})});
 bk.addEventListener('click',function(){if(i>0)show(i-1)});
 })();
